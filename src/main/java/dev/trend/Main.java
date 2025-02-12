@@ -13,16 +13,11 @@ import dev.trend.controller.PostController;
 
 public class Main {
     public static void main(String[] args) {
+
+
         Scanner scanner = new Scanner(System.in);
-
-        // 서비스 및 컨트롤러 초기화
-        NewsRepository newsRepository = new NewsRepository();
-        NewsService newsService = new NewsService(newsRepository);
-        NewsController newsController = new NewsController(newsService, scanner);
-
-        PostRepository postRepository = new PostRepository();
-        PostService postService = new PostServiceImpl(postRepository);
-        PostController postController = new PostController(postService, postRepository, scanner);
+        NewsController newsController = new NewsController( scanner);
+        PostController postController = new PostController( scanner);
 
         while (true) {
             System.out.println("\n📢 Trend Sync");

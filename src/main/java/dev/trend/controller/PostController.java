@@ -8,15 +8,16 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Scanner;
 import dev.trend.domain.post.Post;
+import dev.trend.service.postService.PostServiceImpl;
 
 public class PostController {
-    private final PostService postService;
-    private final PostRepository postRepository;
+
     private final Scanner scanner;
 
-    public PostController(PostService postService, PostRepository postRepository, Scanner scanner) {
-        this.postService = postService;
-        this.postRepository = postRepository;
+
+    PostRepository postRepository = new PostRepository();
+    PostService postService = new PostServiceImpl(postRepository);
+    public PostController( Scanner scanner) {
         this.scanner = scanner;
     }
 

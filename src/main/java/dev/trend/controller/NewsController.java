@@ -1,15 +1,17 @@
 package dev.trend.controller;
 
+import dev.trend.repository.NewsRepository;
 import dev.trend.service.NewsService;
 
 import java.util.Scanner;
 
 public class NewsController {
-    private final NewsService newsService;
-    private final Scanner scanner;
 
-    public NewsController(NewsService newsService, Scanner scanner) {
-        this.newsService = newsService;
+    private final Scanner scanner;
+    NewsRepository newsRepository = new NewsRepository();
+    NewsService newsService = new NewsService(newsRepository);
+
+    public NewsController( Scanner scanner) {
         this.scanner = scanner;
     }
 
