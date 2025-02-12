@@ -12,6 +12,7 @@ import java.time.LocalDateTime;
 public class Post {
 
     /**게시글 Id*/
+
     private Long postId;
 
     /** 게시글 제목 */
