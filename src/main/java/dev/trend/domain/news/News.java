@@ -2,7 +2,11 @@ package dev.trend.domain.news;
 
 
 import dev.trend.domain.member.Category;
+import lombok.Getter;
+import lombok.Setter;
 
+@Setter
+@Getter
 public class News {
 
 
@@ -15,6 +19,9 @@ public class News {
     /**뉴스 내용*/
     private String content;
 
+    /**게시글 작성자**/
+    private String author;
+
     /**뉴스 이미지 */
     private String imgUrl;
 
@@ -24,61 +31,27 @@ public class News {
     /**뉴스 카테고리*/
     private Category category;
 
-
-    public News(Long newsId, String title, String content, String imgUrl, Long views, Category category) {
+    public News(Long newsId, String title, String content, String author) {
         this.newsId = newsId;
         this.title = title;
         this.content = content;
-        this.imgUrl = imgUrl;
-        this.views = views;
-        this.category = category;
+        this.author = author;
     }
 
-    public Long getNewsId() {
-        return newsId;
+
+    // ✅ 조회수 증가 메서드
+    public void increaseViews() {
+        this.views++;
     }
 
-    public void setNewsId(Long newsId) {
-        this.newsId = newsId;
+
+    @Override
+    public String toString() {
+        return "\n"+newsId+"번째 소식 "+ "\n제목 : " +title + "\n조회수 : "+views;
     }
 
-    public String getTitle() {
-        return title;
-    }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
-    }
-
-    public String getImgUrl() {
-        return imgUrl;
-    }
-
-    public void setImgUrl(String imgUrl) {
-        this.imgUrl = imgUrl;
-    }
-
-    public Long getViews() {
-        return views;
-    }
-
-    public void setViews(Long views) {
-        this.views = views;
-    }
-
-    public Category getCategory() {
-        return category;
-    }
-
-    public void setCategory(Category category) {
-        this.category = category;
+    public String showContent(){
+        return "\n"+newsId+"번째 소식 "+ "\n제목 : " +title+ "\n조회수 : "+views+"\n내용 : "+content;
     }
 }
