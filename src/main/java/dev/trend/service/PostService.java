@@ -1,4 +1,7 @@
 package dev.trend.service;
 
-public class NewsService {
+public class PostService {
+
+
+
 }
