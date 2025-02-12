@@ -27,3 +27,4 @@
 2025-02-12 15:51:52,620 [INFO] dev.trend.repository.NewsRepository - 특정 뉴스 조회완료
 2025-02-12 15:51:53,431 [INFO] dev.trend.repository.NewsRepository - 특정 뉴스 조회완료
 2025-02-12 15:51:54,060 [INFO] dev.trend.repository.NewsRepository - 특정 뉴스 조회완료
+2025-02-12 16:10:01,262 [INFO] dev.trend.repository.NewsRepository - 모든 뉴스 조회 완료

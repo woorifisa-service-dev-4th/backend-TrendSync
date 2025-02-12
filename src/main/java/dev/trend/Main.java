@@ -1,14 +1,6 @@
 package dev.trend;
-
-import dev.trend.repository.NewsRepository;
-import dev.trend.service.NewsService;
 import dev.trend.controller.NewsController;
-
 import java.util.Scanner;
-
-import dev.trend.repository.PostRepository;
-import dev.trend.service.postService.PostService;
-import dev.trend.service.postService.PostServiceImpl;
 import dev.trend.controller.PostController;
 
 public class Main {
