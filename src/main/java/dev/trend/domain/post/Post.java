@@ -1,18 +1,10 @@
 package dev.trend.domain.post;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import java.util.Date;
 
-import java.time.LocalDateTime;
-
-@Getter                     // Getter 자동 생성 어노테이션
-@Setter                     // Setter 자동 생성 어노테이션
-@NoArgsConstructor          // 기본 생성자 자동 생성 어노테이션
 public class Post {
 
     /**게시글 Id*/
-
     private Long postId;
 
     /** 게시글 제목 */
@@ -28,6 +20,56 @@ public class Post {
     private Long views;
 
     /** 게시글 생성 날짜*/
-    private LocalDateTime publishDate;
+    private Date publishDate;
+
+
+
+    public Long getPostId() {
+        return postId;
+    }
+
+    public void setPostId(Long postId) {
+        this.postId = postId;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public Long getMemberId() {
+        return memberId;
+    }
+
+    public void setMemberId(Long memberId) {
+        this.memberId = memberId;
+    }
+
+    public Long getViews() {
+        return views;
+    }
+
+    public void setViews(Long views) {
+        this.views = views;
+    }
+
+    public Date getPublishDate() {
+        return publishDate;
+    }
+
+    public void setPublishDate(Date publishDate) {
+        this.publishDate = publishDate;
+    }
 
 }
