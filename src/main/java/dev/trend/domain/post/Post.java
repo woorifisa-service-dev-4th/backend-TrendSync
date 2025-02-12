@@ -1,15 +1,18 @@
 package dev.trend.domain.post;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
 
-@Getter
-@Setter
+@Getter                     // Getter 자동 생성 어노테이션
+@Setter                     // Setter 자동 생성 어노테이션
+@NoArgsConstructor          // 기본 생성자 자동 생성 어노테이션
 public class Post {
 
     /**게시글 Id*/
+
     private Long postId;
 
     /** 게시글 제목 */
