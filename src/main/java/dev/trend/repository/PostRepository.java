@@ -2,6 +2,7 @@ package dev.trend.repository;
 
 import dev.trend.domain.post.Post;
 
+import java.time.LocalDateTime;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -39,5 +40,22 @@ public class PostRepository {
      */
     public void deleteById(Long postId) {
         postStore.remove(postId);
+    }
+
+    /**
+     * 게시글 수정
+     */
+    public Long updateById(Long postId, String title, String content, LocalDateTime publishDate){
+        Post post = postStore.get(postId);
+
+        if (post == null) {
+            throw new IllegalArgumentException("게시글을 찾을 수 없습니다: ID = " + postId);
+        }
+
+        post.setTitle(title);              // 제목 수정
+        post.setContent(content);          // 내용 수정
+        post.setPublishDate(publishDate);  // 게시일 수정
+        save(post);                        // 수정된 게시글 저장
+        return post.getPostId();
     }
 }
