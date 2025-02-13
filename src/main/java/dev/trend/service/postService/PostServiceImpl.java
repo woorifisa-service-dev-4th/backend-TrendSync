@@ -9,7 +9,6 @@ import java.util.List;
 public class PostServiceImpl implements PostService{
 
     private final PostRepository postRepository;
-
     public PostServiceImpl(PostRepository postRepository){
         this.postRepository = postRepository;
     }

@@ -39,7 +39,6 @@ public class News {
     }
 
 
-    // ✅ 조회수 증가 메서드
     public void increaseViews() {
         this.views++;
     }

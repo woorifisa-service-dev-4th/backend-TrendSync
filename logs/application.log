@@ -28,3 +28,20 @@
 2025-02-12 15:51:53,431 [INFO] dev.trend.repository.NewsRepository - 특정 뉴스 조회완료
 2025-02-12 15:51:54,060 [INFO] dev.trend.repository.NewsRepository - 특정 뉴스 조회완료
 2025-02-12 16:10:01,262 [INFO] dev.trend.repository.NewsRepository - 모든 뉴스 조회 완료
+2025-02-12 16:17:42,714 [INFO] dev.trend.repository.NewsRepository - 모든 뉴스 조회 완료
+2025-02-12 16:17:48,356 [INFO] dev.trend.repository.NewsRepository - 모든 뉴스 조회 완료
+2025-02-12 16:41:41,573 [INFO] dev.trend.repository.NewsRepository - 모든 뉴스 조회 완료
+2025-02-12 17:33:24,015 [INFO] dev.trend.repository.NewsRepository - 전체 게시글 조회 완료
+2025-02-12 17:33:28,698 [INFO] dev.trend.repository.NewsRepository - 특정 게시물 조회 완료
+2025-02-12 17:33:32,567 [INFO] dev.trend.repository.NewsRepository - 특정 게시물 조회 완료
+2025-02-12 17:37:54,447 [INFO] dev.trend.repository.NewsRepository - 전체 게시글 조회 완료
+2025-02-12 17:38:04,166 [INFO] dev.trend.repository.NewsRepository - 📌 게시글 저장 완료 (ID: 1, 제목: '1')
+2025-02-13 08:43:21,657 [INFO] dev.trend.repository.NewsRepository - 전체 게시글 조회 완료
+2025-02-13 08:43:25,959 [INFO] dev.trend.repository.NewsRepository - 특정 게시물 조회 완료
+2025-02-13 08:43:29,515 [INFO] dev.trend.repository.NewsRepository - 전체 게시글 조회 완료
+2025-02-13 08:43:43,926 [INFO] dev.trend.repository.NewsRepository - 특정 게시물 조회 완료
+2025-02-13 08:43:45,969 [INFO] dev.trend.repository.NewsRepository - 특정 게시물 조회 완료
+2025-02-13 08:43:48,664 [INFO] dev.trend.repository.NewsRepository - 특정 게시물 조회 완료
+2025-02-13 08:43:49,861 [INFO] dev.trend.repository.NewsRepository - 특정 게시물 조회 완료
+2025-02-13 08:43:50,787 [INFO] dev.trend.repository.NewsRepository - 특정 게시물 조회 완료
+2025-02-13 08:53:16,571 [INFO] dev.trend.repository.NewsRepository - 모든 게시글 조회 완료

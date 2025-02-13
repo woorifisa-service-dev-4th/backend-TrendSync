@@ -8,7 +8,6 @@ import java.time.LocalDateTime;
 
 @Getter                     // Getter 자동 생성 어노테이션
 @Setter                     // Setter 자동 생성 어노테이션
-@NoArgsConstructor          // 기본 생성자 자동 생성 어노테이션
 public class Post {
 
     /**게시글 Id*/
