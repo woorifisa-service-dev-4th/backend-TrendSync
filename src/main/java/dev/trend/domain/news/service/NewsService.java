@@ -1,13 +1,13 @@
-package dev.trend.service;
+package dev.trend.domain.news.service;
 
 
-import dev.trend.repository.NewsRepository;
-
+import dev.trend.domain.news.repository.NewsRepository;
 
 public class NewsService {
 
 
     private final NewsRepository newsRepository;
+
     public NewsService(NewsRepository newsRepository) {
         this.newsRepository = newsRepository;
     }

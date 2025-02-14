@@ -1,4 +1,4 @@
-package dev.trend.domain.member;
+package dev.trend.domain.member.entity;
 
 
 public class Member {

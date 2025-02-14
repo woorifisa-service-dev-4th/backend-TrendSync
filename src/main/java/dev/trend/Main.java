@@ -1,11 +1,10 @@
 package dev.trend;
-import dev.trend.controller.NewsController;
+import dev.trend.domain.news.controller.NewsController;
 import java.util.Scanner;
-import dev.trend.controller.PostController;
+import dev.trend.domain.post.controller.PostController;
 
 public class Main {
     public static void main(String[] args) {
-
 
         Scanner scanner = new Scanner(System.in);
         NewsController newsController = new NewsController( scanner);

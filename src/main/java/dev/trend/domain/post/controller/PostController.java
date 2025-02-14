@@ -1,14 +1,15 @@
-package dev.trend.controller;
+package dev.trend.domain.post.controller;
 
-import dev.trend.repository.PostRepository;
-import dev.trend.service.postService.PostService;
+import dev.trend.domain.post.entity.Post;
+import dev.trend.domain.post.repository.PostRepository;
+import dev.trend.domain.post.service.PostService;
 
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 import java.util.Scanner;
-import dev.trend.domain.post.Post;
-import dev.trend.service.postService.PostServiceImpl;
+
+import dev.trend.domain.post.service.PostServiceImpl;
 
 public class PostController {
 

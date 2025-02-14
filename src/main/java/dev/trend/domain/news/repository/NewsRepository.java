@@ -1,6 +1,5 @@
-package dev.trend.repository;
-import dev.trend.domain.news.News;
-import dev.trend.domain.post.Post;
+package dev.trend.domain.news.repository;
+import dev.trend.domain.news.entity.News;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -25,7 +24,7 @@ public class NewsRepository {
     }
 
     public List<News> findAllNews() {
-        logger.info("최신 it소식 조회완료");
+        logger.info("최신 it 소식 조회완료");
         return new ArrayList<>(news.values());
     }
 

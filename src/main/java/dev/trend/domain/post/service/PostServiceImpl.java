@@ -1,7 +1,7 @@
-package dev.trend.service.postService;
+package dev.trend.domain.post.service;
 
-import dev.trend.domain.post.Post;
-import dev.trend.repository.PostRepository;
+import dev.trend.domain.post.entity.Post;
+import dev.trend.domain.post.repository.PostRepository;
 
 import java.time.LocalDateTime;
 import java.util.List;

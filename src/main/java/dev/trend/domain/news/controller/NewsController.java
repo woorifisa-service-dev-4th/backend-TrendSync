@@ -1,7 +1,7 @@
-package dev.trend.controller;
+package dev.trend.domain.news.controller;
 
-import dev.trend.repository.NewsRepository;
-import dev.trend.service.NewsService;
+import dev.trend.domain.news.repository.NewsRepository;
+import dev.trend.domain.news.service.NewsService;
 
 import java.util.Scanner;
 

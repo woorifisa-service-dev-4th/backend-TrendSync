@@ -1,6 +1,7 @@
-package dev.trend.repository;
+package dev.trend.domain.post.repository;
 
-import dev.trend.domain.post.Post;
+import dev.trend.domain.news.repository.NewsRepository;
+import dev.trend.domain.post.entity.Post;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

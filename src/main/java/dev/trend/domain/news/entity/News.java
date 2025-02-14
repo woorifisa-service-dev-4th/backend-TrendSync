@@ -1,7 +1,7 @@
-package dev.trend.domain.news;
+package dev.trend.domain.news.entity;
 
 
-import dev.trend.domain.member.Category;
+import dev.trend.domain.member.entity.Category;
 import lombok.Getter;
 import lombok.Setter;
 
