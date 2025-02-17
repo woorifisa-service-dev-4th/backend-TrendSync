@@ -1,0 +1,42 @@
+2025-02-14 13:50:06,393 [INFO] dev.trend.domain.news.repository.NewsRepository - 최신 it 소식 조회완료
+2025-02-14 13:51:08,251 [INFO] dev.trend.domain.news.repository.NewsRepository - 최신 it 소식 조회완료
+2025-02-14 13:55:36,559 [INFO] dev.trend.domain.news.repository.NewsRepository - 최신 it 소식 조회완료
+2025-02-14 13:58:58,661 [INFO] dev.trend.domain.news.repository.NewsRepository - 최신 it 소식 조회완료
+2025-02-14 14:01:50,059 [INFO] dev.trend.domain.news.repository.NewsRepository - 게시글 조회 완료
+2025-02-14 14:01:50,065 [INFO] dev.trend.domain.news.repository.NewsRepository - 게시글 저장 완료
+2025-02-14 14:01:50,065 [INFO] dev.trend.domain.news.repository.NewsRepository - 게시글 저장 완료
+2025-02-14 14:01:50,065 [INFO] dev.trend.domain.news.repository.NewsRepository - 모든 게시글 조회 완료
+2025-02-14 14:01:50,067 [INFO] dev.trend.domain.news.repository.NewsRepository - 게시글 저장 완료
+2025-02-14 14:01:50,067 [INFO] dev.trend.domain.news.repository.NewsRepository - 게시글 조회 완료
+2025-02-14 14:01:50,068 [INFO] dev.trend.domain.news.repository.NewsRepository - 게시글 저장 완료
+2025-02-14 14:01:50,068 [INFO] dev.trend.domain.news.repository.NewsRepository - 게시글 수정 완료
+2025-02-14 14:01:50,069 [INFO] dev.trend.domain.news.repository.NewsRepository - 게시글 저장 완료
+2025-02-14 14:01:50,069 [INFO] dev.trend.domain.news.repository.NewsRepository - 게시글 조회 완료
+2025-02-14 14:01:50,070 [INFO] dev.trend.domain.news.repository.NewsRepository - 게시글 저장 완료
+2025-02-14 14:01:50,070 [INFO] dev.trend.domain.news.repository.NewsRepository - 게시글 조회 완료
+2025-02-14 14:01:50,071 [INFO] dev.trend.domain.news.repository.NewsRepository - 게시글 수정 완료
+2025-02-14 14:01:50,073 [INFO] dev.trend.domain.news.repository.NewsRepository - 게시글 저장 완료
+2025-02-14 14:01:50,073 [INFO] dev.trend.domain.news.repository.NewsRepository - 게시글 삭제 완료
+2025-02-14 14:01:50,073 [INFO] dev.trend.domain.news.repository.NewsRepository - 게시글 조회 완료
+2025-02-14 14:21:48,101 [INFO] dev.trend.domain.news.repository.NewsRepository - 최신 it 소식 조회완료
+2025-02-14 14:21:48,135 [INFO] dev.trend.domain.news.repository.NewsRepository - 게시물 조회 완료
+2025-02-14 14:21:48,140 [INFO] dev.trend.domain.news.repository.NewsRepository - 게시물 조회 완료
+2025-02-14 14:21:48,148 [INFO] dev.trend.domain.news.repository.NewsRepository - 게시물 조회 완료
+2025-02-14 14:21:48,152 [INFO] dev.trend.domain.news.repository.NewsRepository - 게시물 조회 완료
+2025-02-14 14:21:48,155 [INFO] dev.trend.domain.news.repository.NewsRepository - 게시물 조회 완료
+2025-02-14 14:21:48,158 [INFO] dev.trend.domain.news.repository.NewsRepository - 게시물 조회 완료
+2025-02-14 14:21:48,160 [INFO] dev.trend.domain.news.repository.NewsRepository - 게시물 조회 완료
+2025-02-14 14:21:48,163 [INFO] dev.trend.domain.news.repository.NewsRepository - 게시물 조회 완료
+2025-02-14 14:21:48,165 [INFO] dev.trend.domain.news.repository.NewsRepository - 게시물 조회 완료
+2025-02-14 14:21:48,168 [INFO] dev.trend.domain.news.repository.NewsRepository - 게시물 조회 완료
+2025-02-16 20:43:57,614 [INFO] dev.trend.domain.news.repository.NewsRepository - 최신 it 소식 조회완료
+2025-02-16 20:43:59,430 [INFO] dev.trend.domain.news.repository.NewsRepository - 게시물 조회 완료
+2025-02-16 20:44:00,672 [INFO] dev.trend.domain.news.repository.NewsRepository - 게시물 조회 완료
+2025-02-16 20:44:02,340 [INFO] dev.trend.domain.news.repository.NewsRepository - 게시물 조회 완료
+2025-02-17 09:06:59,420 [INFO] dev.trend.domain.news.repository.NewsRepository - 게시글 저장 완료
+2025-02-17 09:07:02,254 [INFO] dev.trend.domain.news.repository.NewsRepository - 모든 게시글 조회 완료
+2025-02-17 09:07:05,529 [INFO] dev.trend.domain.news.repository.NewsRepository - 게시글 조회 완료
+2025-02-17 09:07:08,415 [INFO] dev.trend.domain.news.repository.NewsRepository - 게시글 수정 완료
+2025-02-17 09:07:08,416 [INFO] dev.trend.domain.news.repository.NewsRepository - 게시글 저장 완료
+2025-02-17 09:07:15,787 [INFO] dev.trend.domain.news.repository.NewsRepository - 모든 게시글 조회 완료
+2025-02-17 09:07:19,722 [INFO] dev.trend.domain.news.repository.NewsRepository - 게시글 삭제 완료

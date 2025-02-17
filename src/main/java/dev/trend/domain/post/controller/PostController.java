@@ -61,7 +61,7 @@ public class PostController {
     }
 
     private void showPostList() {
-        List<Post> posts = postRepository.findAll();
+        List<Post> posts = postService.getAllPosts();
         if (posts.isEmpty()) {
             System.out.println("📭 게시글이 없습니다.");
             return;
@@ -79,10 +79,10 @@ public class PostController {
         scanner.nextLine(); // 버퍼 클리어
         switch (input) {
             case 1:
-                updatePost(postRepository, scanner);
+                updatePost(postService, scanner);
                 break;
             case 2:
-                deletePost(postRepository, scanner);
+                deletePost(postService, scanner);
                 break;
             case 3:
                 System.out.println("🔙 이전 화면으로 돌아갑니다.");
@@ -93,18 +93,18 @@ public class PostController {
     }
 
     // ✅ 게시글 수정 기능 (메서드 분리)
-    private static void updatePost(PostRepository postRepository, Scanner scanner) {
+    private static void updatePost(PostService postService, Scanner scanner) {
         System.out.print("\n✏ 수정할 게시글 ID 입력: ");
         Long updatePostID = scanner.nextLong();
         scanner.nextLine(); // 버퍼 클리어
 
-        Optional<Post> findTargetPost = postRepository.findById(updatePostID);
-        if (findTargetPost.isEmpty()) {
+        Post findTargetPost = postService.getPostById(updatePostID);
+        if (findTargetPost==null) {
             System.out.println("🚨 해당 게시글을 찾을 수 없습니다.");
             return;
         }
 
-        Post post = findTargetPost.get();
+        Post post = findTargetPost;
         System.out.println("\n🔄 기존 제목: " + post.getTitle());
         System.out.println("🔄 기존 내용: " + post.getContent());
 
@@ -117,17 +117,17 @@ public class PostController {
         if (updateContent.isEmpty()) updateContent = post.getContent();
 
         LocalDateTime updatePublishDate = LocalDateTime.now();
-        postRepository.updateById(updatePostID, updateTitle, updateContent, updatePublishDate);
+        postService.updatePost(updatePostID, updateTitle, updateContent, updatePublishDate);
 
         System.out.println("✅ 게시글이 성공적으로 수정되었습니다.");
     }
 
     // ✅ 게시글 삭제 기능 (메서드 분리)
-    private static void deletePost(PostRepository postRepository, Scanner scanner) {
+    private static void deletePost(PostService postService, Scanner scanner) {
         System.out.print("\n🗑 삭제할 게시글 ID 입력: ");
         Long deletePostID = scanner.nextLong();
         scanner.nextLine(); // 버퍼 클리어
-        postRepository.deleteById(deletePostID);
+        postService.deletePost(deletePostID);
         System.out.println("✅ 게시글이 삭제되었습니다.");
     }
 }

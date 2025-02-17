@@ -32,4 +32,5 @@ public class NewsController {
             System.out.println(newsService.findNewsById(id));
         }
     }
+
 }
