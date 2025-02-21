@@ -9,7 +9,6 @@ public class NewsRepository {
 
     private static Logger logger = LogManager.getLogger(NewsRepository.class);
     private final Map<Long, News> news = new LinkedHashMap<>();
-
     public NewsRepository() {
         news.put(1L, new News(1L, "Java 21 출시", "Java 21이 출시되며 새로운 패턴 매칭과 성능 최적화 기능이 추가되었습니다.", "박지성"));
         news.put(2L, new News(2L, "Spring Boot 3.2 발표", "Spring Boot 3.2가 발표되며 GraalVM 네이티브 이미지 지원이 개선되었습니다.", "손흥민"));

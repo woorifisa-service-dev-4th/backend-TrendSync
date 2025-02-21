@@ -13,6 +13,8 @@ public class PostServiceImpl implements PostService{
         this.postRepository = postRepository;
     }
 
+
+
     @Override
     public Long createPost(String title, String content, Long memberId, LocalDateTime publishDate) {
         Post post = new Post();
@@ -22,6 +24,7 @@ public class PostServiceImpl implements PostService{
         post.setPublishDate(publishDate);
         postRepository.save(post);
         return post.getPostId();
+
     }
 
     @Override

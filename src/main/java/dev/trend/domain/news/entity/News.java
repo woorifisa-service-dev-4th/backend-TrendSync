@@ -3,13 +3,13 @@ package dev.trend.domain.news.entity;
 
 import dev.trend.domain.member.entity.Category;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Setter
 @Getter
+@NoArgsConstructor
 public class News {
-
-
     /** 가져온 뉴스 id */
     private Long newsId;
 
