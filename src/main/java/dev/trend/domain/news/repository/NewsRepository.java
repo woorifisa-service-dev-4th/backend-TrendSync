@@ -1,8 +1,12 @@
 package dev.trend.domain.news.repository;
 import dev.trend.domain.news.entity.News;
+import dev.trend.domain.post.entity.Post;
+import dev.trend.util.DBUtil;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.sql.*;
+import java.time.LocalDateTime;
 import java.util.*;
 
 public class NewsRepository {
@@ -24,23 +28,77 @@ public class NewsRepository {
 
 
     public List<News> findAllNews() {
-        logger.info("최신 it 소식 조회완료");
-        return new ArrayList<>(news.values());
-    }
+        // 조회 SQL
+        final String selectQuey = "SELECT * FROM news";
 
-//    public Map<Long, News> findAllNews() {
+        List<News> news = new ArrayList<>();
+
+        try (Connection connection = DBUtil.getConnection("src/main/resources/jdbc.properties");
+             Statement statement = connection.createStatement();
+             ResultSet resultSet = statement.executeQuery(selectQuey)) {
+
+            while (resultSet.next()) {
+                Long newsId = resultSet.getLong("news_id");
+                String title = resultSet.getString("title");
+                String content = resultSet.getString("content");
+                String author = resultSet.getString("author");
+
+
+                news.add(new News(newsId, title, content, author));
+            }
+            return news;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+
+    }
+//    public List<News> findAllNews() {
 //        logger.info("최신 it 소식 조회완료");
-//        return news;
+//        return new ArrayList<>(news.values());
 //    }
 
 
     public String getNewsById(Long postId) {
-        logger.info("게시물 조회 완료");
-        return Optional.ofNullable(news.get(postId))
-                .map(newsItem -> {
-                    newsItem.increaseViews(); // 조회수 증가
-                    return newsItem.showContent();
-                })
-                .orElse("해당 뉴스가 없습니다.");
+        final String selectQuery = "SELECT content, views FROM news WHERE news_id = ?";
+        final String updateQuery = "UPDATE news SET views = views + 1 WHERE news_id = ?";
+
+        try (Connection connection = DBUtil.getConnection("src/main/resources/jdbc.properties");
+             PreparedStatement selectStatement = connection.prepareStatement(selectQuery);
+             PreparedStatement updateStatement = connection.prepareStatement(updateQuery)) {
+
+            // 뉴스 데이터 조회
+            selectStatement.setLong(1, postId);
+            try (ResultSet rs = selectStatement.executeQuery()) {
+                if (rs.next()) {
+                    String content = rs.getString("content");
+                    int views = rs.getInt("views");
+
+                    // 조회수 증가 처리
+                    updateStatement.setLong(1, postId);
+                    updateStatement.executeUpdate();
+
+                    logger.info("게시물 조회 완료 (postId: " + postId + ", 조회수: " + (views + 1) + ")");
+                    return content;
+                }
+            }
+
+        } catch (SQLException e) {
+            logger.error("게시물 조회 실패 (postId: " + postId + ")", e);
+            throw new RuntimeException("게시물 조회 실패", e);
+        }
+
+        return "해당 뉴스가 없습니다.";
     }
+
+
+//    public String getNewsById(Long postId) {
+//        logger.info("게시물 조회 완료");
+//        return Optional.ofNullable(news.get(postId))
+//                .map(newsItem -> {
+//                    newsItem.increaseViews(); // 조회수 증가
+//                    return newsItem.showContent();
+//                })
+//                .orElse("해당 뉴스가 없습니다.");
+//    }
 }
