@@ -29,7 +29,7 @@ public class PostServiceImpl implements PostService{
 
     @Override
     public Long updatePost(Long postId, String title, String content, LocalDateTime publishDate) {
-        Long updatePostId = postRepository.updateById(postId, title, content, publishDate);
+        Long updatePostId = postRepository.updateById(postId, title, content);
 
         return updatePostId;
     }

@@ -46,3 +46,112 @@
 2025-02-18 17:42:04,979 [INFO] dev.trend.domain.news.repository.NewsRepository - 모든 게시글 조회 완료
 2025-02-18 17:42:25,698 [INFO] dev.trend.domain.news.repository.NewsRepository - 게시글 저장 완료
 2025-02-18 17:42:29,127 [INFO] dev.trend.domain.news.repository.NewsRepository - 모든 게시글 조회 완료
+2025-02-21 13:29:08,427 [INFO] dev.trend.domain.news.repository.NewsRepository - 게시글 저장 완료
+2025-02-21 14:02:56,013 [INFO] dev.trend.domain.news.repository.NewsRepository - 게시글 저장 완료: 6
+2025-02-21 14:19:43,071 [INFO] dev.trend.domain.news.repository.NewsRepository - 게시글 조회 완료
+2025-02-21 14:34:23,894 [ERROR] dev.trend.domain.news.repository.NewsRepository - 게시글 조회 실패 (postId: 1)
+java.sql.SQLSyntaxErrorException: Table 'trendsync.posts' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:972) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at dev.trend.domain.post.repository.PostRepository.findById(PostRepository.java:147) ~[classes/:?]
+	at dev.trend.domain.post.service.PostServiceImpl.getPostById(PostServiceImpl.java:44) ~[classes/:?]
+	at dev.trend.domain.post.controller.PostController.updatePost(PostController.java:101) ~[classes/:?]
+	at dev.trend.domain.post.controller.PostController.showPostList(PostController.java:82) ~[classes/:?]
+	at dev.trend.domain.post.controller.PostController.showPostMenu(PostController.java:40) ~[classes/:?]
+	at dev.trend.Main.main(Main.java:25) ~[classes/:?]
+2025-02-21 14:53:59,922 [ERROR] dev.trend.domain.news.repository.NewsRepository - 게시글 수정 실패 (postId: 1)
+java.sql.SQLSyntaxErrorException: Table 'trendsync.posts' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1061) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1009) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1320) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:994) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at dev.trend.domain.post.repository.PostRepository.updateById(PostRepository.java:96) ~[classes/:?]
+	at dev.trend.domain.post.service.PostServiceImpl.updatePost(PostServiceImpl.java:32) ~[classes/:?]
+	at dev.trend.domain.post.controller.PostController.updatePost(PostController.java:120) ~[classes/:?]
+	at dev.trend.domain.post.controller.PostController.showPostList(PostController.java:82) ~[classes/:?]
+	at dev.trend.domain.post.controller.PostController.showPostMenu(PostController.java:40) ~[classes/:?]
+	at dev.trend.Main.main(Main.java:25) ~[classes/:?]
+2025-02-21 14:55:02,108 [ERROR] dev.trend.domain.news.repository.NewsRepository - 게시글 수정 실패 (postId: 1)
+java.sql.SQLSyntaxErrorException: Unknown column 'publish_date' in 'field list'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1061) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1009) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1320) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:994) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at dev.trend.domain.post.repository.PostRepository.updateById(PostRepository.java:96) ~[classes/:?]
+	at dev.trend.domain.post.service.PostServiceImpl.updatePost(PostServiceImpl.java:32) ~[classes/:?]
+	at dev.trend.domain.post.controller.PostController.updatePost(PostController.java:120) ~[classes/:?]
+	at dev.trend.domain.post.controller.PostController.showPostList(PostController.java:82) ~[classes/:?]
+	at dev.trend.domain.post.controller.PostController.showPostMenu(PostController.java:40) ~[classes/:?]
+	at dev.trend.Main.main(Main.java:25) ~[classes/:?]
+2025-02-21 14:55:57,987 [ERROR] dev.trend.domain.news.repository.NewsRepository - 게시글 수정 실패 (postId: 1)
+java.sql.SQLException: No value specified for parameter 4
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:130) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1084) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1009) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1320) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:994) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at dev.trend.domain.post.repository.PostRepository.updateById(PostRepository.java:96) ~[classes/:?]
+	at dev.trend.domain.post.service.PostServiceImpl.updatePost(PostServiceImpl.java:32) ~[classes/:?]
+	at dev.trend.domain.post.controller.PostController.updatePost(PostController.java:120) ~[classes/:?]
+	at dev.trend.domain.post.controller.PostController.showPostList(PostController.java:82) ~[classes/:?]
+	at dev.trend.domain.post.controller.PostController.showPostMenu(PostController.java:40) ~[classes/:?]
+	at dev.trend.Main.main(Main.java:25) ~[classes/:?]
+2025-02-21 14:56:36,796 [ERROR] dev.trend.domain.news.repository.NewsRepository - 게시글 수정 실패 (postId: 1)
+com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Truncated incorrect DOUBLE value: '하세요'
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:104) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1061) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1009) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1320) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:994) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at dev.trend.domain.post.repository.PostRepository.updateById(PostRepository.java:96) ~[classes/:?]
+	at dev.trend.domain.post.service.PostServiceImpl.updatePost(PostServiceImpl.java:32) ~[classes/:?]
+	at dev.trend.domain.post.controller.PostController.updatePost(PostController.java:120) ~[classes/:?]
+	at dev.trend.domain.post.controller.PostController.showPostList(PostController.java:82) ~[classes/:?]
+	at dev.trend.domain.post.controller.PostController.showPostMenu(PostController.java:40) ~[classes/:?]
+	at dev.trend.Main.main(Main.java:25) ~[classes/:?]
+2025-02-21 14:57:21,734 [INFO] dev.trend.domain.news.repository.NewsRepository - 게시글 수정 완료 (postId: 1)
+2025-02-21 15:10:08,493 [ERROR] dev.trend.domain.news.repository.NewsRepository - 게시글 삭제 실패 (postId: 1)
+java.sql.SQLSyntaxErrorException: Table 'trendsync.posts' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1061) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1009) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1320) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:994) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at dev.trend.domain.post.repository.PostRepository.deleteById(PostRepository.java:112) ~[classes/:?]
+	at dev.trend.domain.post.service.PostServiceImpl.deletePost(PostServiceImpl.java:39) ~[classes/:?]
+	at dev.trend.domain.post.controller.PostController.deletePost(PostController.java:130) ~[classes/:?]
+	at dev.trend.domain.post.controller.PostController.showPostList(PostController.java:85) ~[classes/:?]
+	at dev.trend.domain.post.controller.PostController.showPostMenu(PostController.java:40) ~[classes/:?]
+	at dev.trend.Main.main(Main.java:25) ~[classes/:?]
+2025-02-21 15:11:35,070 [INFO] dev.trend.domain.news.repository.NewsRepository - 게시글 삭제 완료 (postId: 1)
+2025-02-21 15:11:45,901 [INFO] dev.trend.domain.news.repository.NewsRepository - 게시글 삭제 완료 (postId: 6)
+2025-02-21 15:18:05,411 [INFO] dev.trend.domain.news.repository.NewsRepository - 최신 it 소식 조회완료
+2025-02-21 15:18:13,233 [INFO] dev.trend.domain.news.repository.NewsRepository - 게시물 조회 완료
+2025-02-21 15:21:12,692 [INFO] dev.trend.domain.news.repository.NewsRepository - 최신 it 소식 조회완료
+2025-02-21 15:21:15,987 [INFO] dev.trend.domain.news.repository.NewsRepository - 게시물 조회 완료
+2025-02-21 15:28:11,456 [INFO] dev.trend.domain.news.repository.NewsRepository - 게시물 조회 완료
+2025-02-21 15:33:09,499 [ERROR] dev.trend.domain.news.repository.NewsRepository - 게시물 조회 실패 (postId: 1)
+java.sql.SQLSyntaxErrorException: Unknown column 'post_id' in 'where clause'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:972) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at dev.trend.domain.news.repository.NewsRepository.getNewsById(NewsRepository.java:72) ~[classes/:?]
+	at dev.trend.domain.news.service.NewsService.findNewsById(NewsService.java:22) ~[classes/:?]
+	at dev.trend.domain.news.controller.NewsController.showNewsMenu(NewsController.java:32) ~[classes/:?]
+	at dev.trend.Main.main(Main.java:22) ~[classes/:?]
+2025-02-21 15:33:37,839 [INFO] dev.trend.domain.news.repository.NewsRepository - 게시물 조회 완료 (postId: 2, 조회수: 201)
+2025-02-21 15:34:41,166 [INFO] dev.trend.domain.news.repository.NewsRepository - 게시물 조회 완료 (postId: 1, 조회수: 101)
+2025-02-21 15:34:43,740 [INFO] dev.trend.domain.news.repository.NewsRepository - 게시물 조회 완료 (postId: 1, 조회수: 102)
